@@ -13,10 +13,10 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**") // Aplica a todas las rutas que empiecen con /api/
-                        .allowedOriginPatterns("*") // Permite que cualquier frontend (como tu React) se conecte
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Permite estos métodos
-                        .allowedHeaders("*") // Permite cualquier cabecera
+                registry.addMapping("/api/**") 
+                        .allowedOriginPatterns("*") 
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
+                        .allowedHeaders("*") 
                         .allowCredentials(false);
             }
         };
